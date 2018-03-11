@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Intermediate HTML/CSS &amp; Intro to Responsive Design &hearts; Girl Develop It Boulder</title>
+
+    <meta name="description" content="">
+    <meta name="author" content="Cara Jo Miller, adapted by Lisa Smith">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <link rel="stylesheet" href="reveal/css/reveal.css">
+    <link rel="stylesheet" href="reveal/css/theme/simple.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <!-- light editor-->
+    <link rel="stylesheet" href="reveal/lib/css/light.css">
+    <!-- dark editor<link rel="stylesheet" href="reveal/lib/css/dark.css">-->
+    <link rel="stylesheet" href="css/slides.css">
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+    if (window.location.search.match(/print-pdf/gi)) {
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'reveal/css/print/pdf.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    }
+    </script>
+    <link rel="icon" type="image/x-icon" href="reveal/favicon.ico" />
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <div class="reveal">
+
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <!-- Opening -->
+            <section>
+                <img src="images/gdi_logo_badge.png" style="padding: 10px; width:400px;" alt="gdi" />
+                <h3>Intermediate HTML/CSS &amp; Intro to Responsive Design</h3>
+            </section>
+            <!-- Welcome-->
+<section data-background="#f05b62">
+    <h1 style="color: #fafafa;">Hero Section</h1>
+</section>
+<section>
+    <h3>What is a Hero?</h3>
+    <ul>
+        <li>Large banner image, prominently placed on a web page, generally in the front and center</li>
+        <li>First visual a visitor encounters on the site and its purpose is to present an overview of the site's most important content</li>
+        <li>Often consists of image and text, can be static or dynamic</li>
+    </ul>
+</section>
+<section>
+    <section>
+        <h2>Hero Examples</h2>
+    </section>
+    <section>
+        <img src="images/apple.png" />
+    </section>
+    <section>
+        <img src="images/uber.png" />
+    </section>
+    <section>
+        <img src="images/fostr.png" />
+    </section>
+    <section>
+        <img src="images/ndesign.png" />
+    </section>
+    <section>
+        <img src="images/karma.png" />
+    </section>
+</section>
+<section>
+    <h3>Hero: HTML</h3>
+    <p>Our Hero
+        <code>section</code> should look a little something like this:</p>
+    <pre><code class="xml">&lt;section id="hero">
+<img src="images/zebra.jpg" alt="IMA Zebra" />
+<h2>IMA Zebra</h2>
+<span class="city">Africa</span>
+&lt;/section> </code></pre>
+</section>
+<section>
+    <h3>Hero: CSS</h3>
+    <p>Now is where the fun really happens!</p>
+    <pre><code class="css">#hero {
+background: url(../images/zebra-hero.jpg) no-repeat top left;
+color: #fafafa;
+text-align: center;
+}
+</code></pre>
+</section>
+<section>
+    <h3>Hero: CSS</h3>
+    <p>Let's give it a height and some padding too.</p>
+    <pre><code class="css">#hero {
+background: url(../images/zebra.jpg) no-repeat top left;
+color: #fafafa;
+text-align: center;
+height: 350px;
+padding: 25px 0;
+}
+</code></pre>
+    <p>Remember our Box Model. Padding adds to the height &amp; width of elements.</p>
+    <p>So the height of our hero will be
+        <code>400px</code>
+    </p>
+</section>
+<section>
+    <h3>Well, that was unexpected...</h3>
+    <p>Things that are wrong with this hero right now:
+        <ol>
+            <li>That image of your face is way to big! And it's not even a circle!</li>
+            <li>The background image is way too large</li>
+            <li>The headline is really tiny</li>
+        </ol>
+</section>
+<section>
+    <h3>Hero: Profile Image</h3>
+    <p>Let's make the profile image a little smaller.</p>
+    <p>We'll use CSS Targeting with the descendant selector to style the image.</p>
+    <pre><code class="css">#hero img {
+width: 150px;
+}</code></pre>
+    <p>That should do it</p>
+</section>
+    <section data-background="#f05b62">
+        <h1 style="color: #fafafa;">Border Magic</h1>
+    </section>
+    <section>
+        <h3>Turning squares into circles with magic!</h3>
+        <p>Okay, it's not really magic, it's just a bit of CSS3.</p>
+    </section>
+    <section>
+        <h3>Border-Radius</h3>
+        <p>Simply put, allows you to create rounded corners on boxes.</p>
+        <p>Designers rejoice!</p>
+    </section>
+    <section>
+        <h3>Border-radius</h3>
+        <p>20px radius on all corners</p>
+        <pre><code class="css">#hero img {
+border-radius: 20px;
+}</code></pre>
+        <img src="images/radius-20.png" />
+    </section>
+    <section>
+        <h3>Border-radius</h3>
+        <p>10px radius on top left &amp; bottom right</p>
+        <p>40px on top right &amp; bottom left</p>
+        <pre><code class="css">#hero img {
+border-radius: 10px 40px;
+}</code></pre>
+        <img src="images/radius-10-40.png" />
+    </section>
+    <section>
+        <h3>Border-radius</h3>
+        <p>10px radius on top left</p>
+        <p>20px radius top right</p>
+        <p>40px radius bottom right</p>
+        <p>80px radius bottom left</p>
+        <pre><code class="css">#hero img {
+border-radius: 10px 20px 40px 80px;
+}</code></pre>
+        <img src="images/radius-10-20-40-80.png" />
+    </section>
+    <section>
+        <h3>Border-radius</h3>
+        <p>50% radius on all corners</p>
+        <pre><code class="css">#hero img {
+border-radius: 50%;
+}</code></pre>
+        <img src="images/radius-50.png" />
+    </section>
+    <section data-background="#f05b62">
+        <h1 style="color: #fafafa;">Vendor Prefixes</h1>
+    </section>
+    <section>
+        <h3>Vendor Prefixes</h3>
+        <p>HTML5 and CSS3 are still new!</p>
+        <p>This is great, but it means that not all browsers treat new CSS3 properties the same</p>
+    </section>
+    <section>
+        <h3>Vendor Prefixes</h3>
+        <p>Flags it as a work-in-progress</p>
+        <p>When finished, the browser should support the non-prefixed name</p>
+    </section>
+    <section>
+        <h3>Vendor Prefixes</h3>
+        <p>Each browser has their own:</p>
+        <ul>
+            <li>
+                <span class="green">Chrome:</span>-webkit-</li>
+            <li>
+                <span class="green">Firefox:</span>-moz-</li>
+            <li>
+                <span class="green">Safari:</span>-webkit-</li>
+            <li>
+                <span class="green">Opera:</span>-o-</li>
+        </ul>
+    </section>
+    <section>
+        <h3>Using Prefixes</h3>
+        <pre><code class="css">#hero img {
+-moz-border-radius: 50%;
+-webkit-border-radius: 50%;
+-ms-border-radius: 50%;
+-o-border-radius: 50%;
+border-radius: 50%;
+}</code></pre>
+        <p>Order matters! The non-prefixed version should always go last.</p>
+    </section>
+    <section>
+        <h3>NOTE:</h3>
+        <p>While you should always use the vendor prefixes when writing code, today we're just going to use the non-prefixed property.</p>
+        <p>This is to save time during the code exercises</p>
+    </section>
+<section data-background="#f05b62">
+    <h1 style="color: #fafafa;">Back to our Hero!</h1>
+</section>
+<section>
+    <h3>Background-size</h3>
+    <p>Notice how the image is too large for the section? Let's fix that with a new property called
+        <code>background-size</code>
+    </p>
+    <pre><code class="css">#hero {
+background: url(../images/zebra.jpg) no-repeat top left;
+color: #fafafa;
+text-align: center;
+height: 350px;
+padding: 25px 0;
+background-size: cover;
+}
+</code></pre>
+    <p>
+        <code>cover</code> scales the image to the largest size such that both its width and its height can fit inside the content area.</p>
+</section>
+
+<section>
+    <h3>Develop It!</h3>
+    <p>Let's make some small tweaks to the Hero
+        <ul>
+            <li>Move the image down from the top</li>
+            <li>Adjust the font size of the header</li>
+            <li>Add a border to the span</li>
+        </ul>
+
+</section>
+<section data-background="#f05b62">
+    <h1 style="color: #fafafa;">3-column Content Area</h1>
+</section>
+<section>
+    <h3>Why 3 columns?</h3>
+    <p>Because 2 columns is so 2013</p>
+    <p>Or, because it's a comfortable width for readability. And because 3 is a pleasing design construct.</p>
+</section>
+<section>
+    <h3>3 Column: HTML</h3>
+    <p>Our code should look something like this:</p>
+    <pre><code class="xml">&lt;section id="main-content">
+<h3>...</h3>
+&lt;section class="column">
+&lt;img src="images/africa.png" alt="Africa">
+&lt;h4>My Home&lt;/h4>
+&lt;p>Wild zebras live in Africa.&lt;/p>
+&lt;a href="home.html" class="btn">See my home&lt;/a>
+&lt;/section>
+&lt;!-- Repeat .column x3 -->
+&lt;/section> </code></pre>
+
+</section>
+<section>
+    <h3>3 Column: CSS</h3>
+    <p>Now that we have our 3 columns, we want them to appear next to each other. We can do this by floating them all left.</p>
+    <pre><code class="css">.column {
+float: left;
+width: 30%;
+padding: 15px;
+}        </code></pre>
+    <p>We used 30%, because it lets us perfectly spaced columns without doing math! Don't forget padding (or margin) to give the columns some space.</p>
+</section>
+<section>
+    <h3>Wow. Large Images.</h3>
+    <p>The images didn't scale with the columns, because they ignore constraints like
+        <code>div</code> width, unless you tell them to do so.</p>
+    <pre><code class="css">.column img {
+width: 90%;
+max-width: 90%;
+}</code></pre>
+    <p>There we go!</p>
+    <p>Let's add a border radius to it too, because we &hearts; circles</p>
+    <pre><code class="css">.column img {
+width: 90%;
+max-width: 90%;
+border-radius: 50%;
+}</code></pre>
+</section>
+<section>
+    <h3>3 Column: Container</h3>
+    <p>We've got our 3 column layout set, our images are scaled based on the width of the column, but our columns are still bumping against the edges of the browser.</p>
+    <pre><code class="xml">&lt;section id="main-content">
+<div class="container">
+<h3>...</h3>
+&lt;section class="column">
+...
+&lt;/section>
+&lt;section class="column">
+...
+&lt;/section>
+&lt;section class="column">
+...
+&lt;/section>
+</div>
+&lt;/section></code></pre>
+    <p>Adding the container, which we already defined the width of, makes everything line up.</p>
+</section>
+<section>
+    <aside class="notes">End of Class 2 in 4 week sequence</aside>
+    <h3>Develop It!</h3>
+    <p>Let's make some small tweaks to these columns
+        <ul>
+            <li>Adjust the font size of the main header of the content area</li>
+            <li>Adjust the font size of the headers in the columns - try changing their colors too</li>
+            <li>Add a border to the images to make them stand out a bit more</li>
+        </ul>
+</section>
+</div>
+<footer>
+    <div class="copyright">
+        Intermediate HTML/CSS &amp; Intro to Responsive Design &hearts; Girl Develop It RDU --
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+            <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" />
+        </a>
+    </div>
+</footer>
+</div>
+
+
+<script src="reveal/lib/js/head.min.js"></script>
+<script src="reveal/js/reveal.min.js"></script>
+<script src="js/jquery-1.8.2.min.js"></script>
+<script src="js/slides.js"></script>
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+controls: true,
+progress: true,
+history: true,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+
+// Optional libraries used to extend on reveal.js
+dependencies: [{
+    src: 'reveal/lib/js/classList.js',
+    condition: function() {
+        return !document.body.classList;
+    }
+}, {
+    src: 'reveal/plugin/markdown/showdown.js',
+    condition: function() {
+        return !!document.querySelector('[data-markdown]');
+    }
+}, {
+    src: 'reveal/plugin/markdown/markdown.js',
+    condition: function() {
+        return !!document.querySelector('[data-markdown]');
+    }
+}, {
+    src: 'reveal/plugin/highlight/highlight.js',
+    async: true,
+    callback: function() {
+        hljs.initHighlightingOnLoad();
+    }
+}, {
+    src: 'reveal/plugin/zoom-js/zoom.js',
+    async: true,
+    condition: function() {
+        return !!document.body.classList;
+    }
+}, {
+    src: 'reveal/plugin/notes/notes.js',
+    async: true,
+    condition: function() {
+        return !!document.body.classList;
+    }
+}]
+});
+</script>
+
+</body>
+
+</html>
