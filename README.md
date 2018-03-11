@@ -1,6 +1,9 @@
 Intermediate HTML/CSS &amp; Intro to Responsive Design
 ================================
 #### Written by Cara Jo Miller, GDI Boulder. Modified by Lisa Smith, GDI RDU
+
+Class One: https://hannahhch.github.io/gdi-intermediate-html-css/class1.html#/58
+
 ---------------------
 ## Course description
 
@@ -17,12 +20,12 @@ Introduction to HTML/CSS or basic HTML/CSS experience.
 ### Tech requirements:
 
 * Your laptop and charger. Note: A netbook or tablet is NOT a substitute.
-* A modern browser: either Chrome with the "Web Developer" extension or Firefox with Firebug installed. 
+* A modern browser: either Chrome with the "Web Developer" extension or Firefox with Firebug installed.
 * A text editor. We recommend Sublime Text 2 (free; available for both Mac and PC).
 
 ### Topics covered:
 
-* HTML5 elements 
+* HTML5 elements
 * Advanced CSS selectors
 * CSS Transitions
 * CSS Transforms
