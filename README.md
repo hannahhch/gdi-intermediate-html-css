@@ -2,7 +2,7 @@ Intermediate HTML/CSS &amp; Intro to Responsive Design
 ================================
 #### Written by Cara Jo Miller, GDI Boulder. Modified by Lisa Smith, GDI RDU
 
-Class One: https://hannahhch.github.io/gdi-intermediate-html-css/class1.html#/58
+Class One: https://hannahhch.github.io/gdi-intermediate-html-css/class1.html#/
 
 ---------------------
 ## Course description
