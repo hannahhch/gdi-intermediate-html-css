@@ -76,11 +76,6 @@
               <li class="fragment">HTML/CSS standard practices</li>
               <li class="fragment">Flexbox</li>
               <li class="fragment">Horizontal &amp; fixed navigation</li>
-              <li class="fragment">Heros with full bleed background images</li>
-              <li class="fragment">Border-radius on images &amp; elements</li>
-              <li class="fragment">Custom font-faces</li>
-              <li class="fragment">Three column layouts</li>
-              <li class="fragment">Fancy buttons</li>
             </ul>
             </section>
             <section>
@@ -95,7 +90,7 @@
                 <h4>Download workshop files <a href="./workshop-files-zipped.zip" download> <strong>here</strong></a></h4>
                 <ul>
                     <li>We have provided a folder that contains sample images for you to use today. We encourage you to be creative so don't feel like you're restricted to these images</li>
-                    <li>We've also included a blank index.html file for you to work from, as well as the final site for you to use as a reference if you get stuck.</li>
+                    <li>We've also included the final site for you to use as a reference if you get stuck.</li>
                 </ul>
             </section>
             <section>
@@ -518,6 +513,7 @@
                   <p>Practice using flexbox to style your navigation bar</p>
                 <ul>
                     <li>Remember to set <code>display: flex</code> on your parent container</li>
+                    <li>And check out the resources if you need ideas!</li>
                 </ul>
             </section>
 
@@ -582,29 +578,7 @@ nav {
     width: 100%;
 }</code></pre>
             </section>
-            <section>
-                <h3>Fixed Nav: CSS</h3>
-                <p>Now we need to get those list items next to each other instead of stacked.</p>
-                <p>Let's float them to the left and add some padding to the links so they have a large clickable area.</p>
-                <pre><code class="css">nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: #fafafa;
-    border-bottom: 2px solid #ccc;
-    height: 70px;
-    width: 100%;
-}
-nav li {
-    float: left;
-    width: auto;
-}
-nav li a {
-    padding: 25px 10px;
-    display: block;
-}
-</code></pre>
-            </section>
+
             <section>
                 <h3>Fixed Nav: Adding a brand</h3>
                 <p>We can use an
@@ -626,16 +600,12 @@ nav li a {
                 <h3>Fixed Nav: Text replacement &amp; H1s</h3>
                 <pre><code class="css">#brand {
     color: transparent;
-    background: url(../images/z.png) no-repeat top left;
+    background: url(../images/z.png);
     height: 60px;
     width: 60px;
-    float: left;
     margin: 5px;
 }
-nav ul {
-    float: right;
-    width: auto;
-}   </code></pre>
+  </code></pre>
             </section>
             <section>
                 <h3>Why Text Replacement?</h3>
@@ -678,6 +648,8 @@ nav ul {
                 <h3>Develop It!</h3>
                 <p>Let's make some small tweaks to the navigation
                     <ul>
+                      <li>Add a fixed width</li>
+                      <li>Make sure your flexbox items haven't shifted!</li>
                         <li>Remove the underlines on the links with
                             <code>text-decoration</code>
                         </li>
