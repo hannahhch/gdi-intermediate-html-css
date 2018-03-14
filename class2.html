@@ -48,9 +48,131 @@
                 <h3>Intermediate HTML/CSS &amp; Intro to Responsive Design (Class 2)</h3>
             </section>
             <!-- Welcome-->
-<section data-background="#f05b62">
-    <h1 style="color: #fafafa;">Hero Section</h1>
+
+<section>
+  <h2>Flexbox</h2>
+  <img src="https://media.giphy.com/media/l4KibK3JwaVo0CjDO/giphy.gif" alt="cat box">
+
 </section>
+<section>
+  <h2>Display: flex</h2>
+  <ul>
+  <li>Flexbox is an <strong>incredibly </strong>powerful tool!</li>
+  <li>By using <code>display: flex;</code> we can use flexbox to position our items inside a flexible box.</li>
+  <li>Flexbox allows us to easily manupulate layout and display items where we want them on the page</li>
+</ul>
+</section>
+<section>
+  <h2>How to Start</h2>
+  <pre>
+    <code class="xml">
+      <div class="container">
+        <div>Item One</div>
+        <div>Item Two</div>
+        <div>Item Three</div>
+      </div>
+    </code>
+  </pre>
+  <pre>
+    <code>
+      .container {
+        display: flex;
+      }
+
+    </code>
+  </pre>
+  <p>Make sure to target the parent class!</p>
+</section>
+<section>
+  <h2>Spacing Properties</h2>
+  <pre>
+    <code>
+      .container {
+        display: flex;
+        justify-content: space-around;
+      }
+    </code>
+  </pre>
+  <img src="images/space-around.png"/>
+</section>
+  <section>
+  <pre>
+    <code>
+      .container {
+        display: flex;
+        justify-content: center;
+      }
+      .container div {
+        padding: 0 15px;
+      }
+    </code>
+  </pre>
+  <img src="images/center.png" alt="center flexbox">
+</section>
+<section>
+  <h2>Perfectly Centered!</h2>
+  <pre>
+    <code>.container {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 200px;
+border: solid 1px black;
+}
+
+.container div {
+padding: 0 15px;
+}
+    </code>
+  </pre>
+  <img src="images/centered.png"/>
+</section>
+<section>
+  <h2>We can even get our items to stack!</h2>
+  <pre>
+    <code>
+      .container {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
+
+    </code>
+  </pre>
+    <img src="images/column.png" alt="flex column">
+</section>
+<section>
+  <h2>Maybe we want our items reversed?</h2>
+  <pre>
+    <code>
+      .container {
+        justify-content: center;
+        flex-direction: row-reverse;
+        align-items: center;
+      }
+
+    </code>
+  </pre>
+  <img src="images/reverse.png" alt="row reverse">
+</section>
+<section>
+  <h2>More Resources</h2>
+  <ul>
+  <li><a href="http://flexboxfroggy.com/" target="_blank">Flexbox Froggy</a></li>
+  <li><a href="http://jonibologna.com/content/images/flexboxsheet.pdf" target="_blank">Cheatsheet</a></li>
+  <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">Complete Guide</a></li>
+</ul>
+</section>
+<section>
+    <h3>Let's Develop It</h3>
+      <p>Practice using flexbox to space out the items in your navigation bar</p>
+    <ul>
+        <li>Remember to set <code>display: flex</code> on your parent container</li>
+        <li>And check out the resources if you need ideas!</li>
+    </ul>
+</section>
+
+
 <section>
     <h3>What is a Hero?</h3>
     <ul>
@@ -81,6 +203,9 @@
 <h2>IMA Zebra</h2>
 <span class="city">Africa</span>
 &lt;/section> </code></pre>
+</section>
+<section data-background="#f05b62">
+    <h1 style="color: #fafafa;">Hero Section</h1>
 </section>
 <section>
     <h3>Hero: CSS</h3>
