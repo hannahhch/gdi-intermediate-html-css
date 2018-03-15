@@ -59,18 +59,25 @@
   <ul>
   <li>Flexbox is an <strong>incredibly </strong>powerful tool!</li>
   <li>By using <code>display: flex;</code> we can use flexbox to position our items inside a flexible box.</li>
-  <li>Flexbox allows us to easily manupulate layout and display items where we want them on the page</li>
+  <li>Flexbox allows us to quickly manupulate layout and display items where we want them on the page</li>
+    <li>Flexbox can help us space out the items in our nav bar</li>
 </ul>
+</section>
+<section>
+    <h3>Wait, didn't we give our nav bar <code>display: fixed</code>?</h3>
+    <p>That's right! We will need to make sure to target a different element.</p>
 </section>
 <section>
   <h2>How to Start</h2>
   <pre>
     <code class="xml">
+    <nav>
       <div class="container">
         <div>Item One</div>
         <div>Item Two</div>
         <div>Item Three</div>
       </div>
+    </nav>
     </code>
   </pre>
   <pre>
@@ -113,15 +120,15 @@
   <h2>Perfectly Centered!</h2>
   <pre>
     <code>.container {
-display: flex;
-justify-content: center;
-align-items: center;
-height: 200px;
-border: solid 1px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    border: solid 1px black;
 }
 
 .container div {
-padding: 0 15px;
+    padding: 0 15px;
 }
     </code>
   </pre>
@@ -165,13 +172,15 @@ padding: 0 15px;
 </section>
 <section>
     <h3>Let's Develop It</h3>
-      <p>Practice using flexbox to space out the items in your navigation bar</p>
     <ul>
+        <p>Practice using flexbox to space out the items in your navigation bar</p>
         <li>Remember to set <code>display: flex</code> on your parent container</li>
-        <li>And check out the resources if you need ideas!</li>
     </ul>
 </section>
-
+<section>
+    <h1>Hero Images</h1>
+    <img src="https://media.giphy.com/media/N97kHQgG33rUI/giphy.gif"/>
+</section>
 
 <section>
     <h3>What is a Hero?</h3>
@@ -181,39 +190,43 @@ padding: 0 15px;
         <li>Often consists of image and text, can be static or dynamic</li>
     </ul>
 </section>
+
     <section>
-        <h2>Hero Examples</h2>
-        <img src="https://media.giphy.com/media/N97kHQgG33rUI/giphy.gif"/>
-    </section>
-    <section>
-        <img src="images/hero-rover.png" />
+        <img src="images/hero-apple.png" />
     </section>
     <section>
         <img src="images/hero-counter.png" />
+        <a href="https://counterculturecoffee.com/" target="_blank">Carousel Hero</a>
     </section>
     <section>
-        <img src="images/hero-apple.png" />
+        <img src="images/invision.png" />
+        <a href="https://www.invisionapp.com/" target="_blank">Video Hero</a>
+    </section>
+    <section>
+        <img src="images/modcloth.png" class="img-small"/>
+    </section>
+    <section>
+        <img src="images/mod-large.png"/>
     </section>
 <section>
     <h3>Hero: HTML</h3>
     <p>Our Hero
         <code>section</code> should look a little something like this:</p>
-    <pre><code class="xml">&lt;section id="hero">
-<img src="images/zebra.jpg" alt="IMA Zebra" />
-<h2>IMA Zebra</h2>
-<span class="city">Africa</span>
+    <pre>
+<code class="xml">&lt;section id="hero">
+  <img src="images/zebra.jpg" alt="IMA Zebra" />
+  <h2>IMA Zebra</h2>
+  <span class="city">Africa</span>
 &lt;/section> </code></pre>
 </section>
-<section data-background="#f05b62">
-    <h1 style="color: #fafafa;">Hero Section</h1>
-</section>
+
 <section>
     <h3>Hero: CSS</h3>
     <p>Now is where the fun really happens!</p>
     <pre><code class="css">#hero {
-background: url(../images/zebra-hero.jpg) no-repeat;
-color: #fafafa;
-text-align: center;
+  background: url("images/zebra-hero.jpg") no-repeat;
+  color: #fafafa;
+  text-align: center;
 }
 </code></pre>
 </section>
@@ -221,11 +234,11 @@ text-align: center;
     <h3>Hero: CSS</h3>
     <p>Let's give it a height and some padding too.</p>
     <pre><code class="css">#hero {
-background: url(../images/zebra.jpg) no-repeat top left;
-color: #fafafa;
-text-align: center;
-height: 350px;
-padding: 25px 0;
+  background: url("images/zebra.jpg") no-repeat;
+  color: #fafafa;
+  text-align: center;
+  height: 350px;
+  padding: 25px 0;
 }
 </code></pre>
     <p>Remember our Box Model. Padding adds to the height &amp; width of elements.</p>
@@ -238,9 +251,18 @@ padding: 25px 0;
     <p>Let's make the profile image a little smaller.</p>
     <p>We'll use CSS Targeting with the descendant selector to style the image.</p>
     <pre><code class="css">#hero img {
-width: 150px;
+  width: 150px;
 }</code></pre>
     <p>That should do it</p>
+</section>
+<section>
+    <h2>Hero Image Resources</h2>
+    <ul>
+        <li><a href="https://unsplash.com/" target="_blank">Unsplash</a></li>
+        <li><a href="https://www.pexels.com/" target="_blank">Pexels</a></li>
+        <li><a href="https://burst.shopify.com/" target="_blank">Burst</a></li>
+        <li>Maybe you want a gradient instead?<a href="https://webgradients.com/?ref=sansfrancis.co" target="_blank"> Web Gradients</a></li>
+    </ul>
 </section>
 <section>
   <h2>Let's Develop It!</h2>
@@ -250,6 +272,7 @@ width: 150px;
     <li>Add some text</li>
     <li>Add a profile image</li>
   </ul>
+
 </section>
     <section data-background="#f05b62">
         <h1 style="color: #fafafa;">Border Radius</h1>
@@ -268,7 +291,7 @@ width: 150px;
         <h3>Border-radius</h3>
         <p>20px radius on all corners</p>
         <pre><code class="css">#hero img {
-border-radius: 20px;
+    border-radius: 20px;
 }</code></pre>
         <img src="images/radius-20.png" />
     </section>
@@ -277,7 +300,7 @@ border-radius: 20px;
         <p>10px radius on top left &amp; bottom right</p>
         <p>40px on top right &amp; bottom left</p>
         <pre><code class="css">#hero img {
-border-radius: 10px 40px;
+    border-radius: 10px 40px;
 }</code></pre>
         <img src="images/radius-10-40.png" />
     </section>
@@ -288,7 +311,7 @@ border-radius: 10px 40px;
         <p>40px radius bottom right</p>
         <p>80px radius bottom left</p>
         <pre><code class="css">#hero img {
-border-radius: 10px 20px 40px 80px;
+    border-radius: 10px 20px 40px 80px;
 }</code></pre>
         <img src="images/radius-10-20-40-80.png" />
     </section>
@@ -296,61 +319,11 @@ border-radius: 10px 20px 40px 80px;
         <h3>Border-radius</h3>
         <p>50% radius on all corners</p>
         <pre><code class="css">#hero img {
-border-radius: 50%;
+    border-radius: 50%;
 }</code></pre>
         <img src="images/radius-50.png" />
     </section>
-    <section data-background="#f05b62">
-        <h2 style="color: #fafafa;">Vendor Prefixes</h2>
-        <img src="https://media.giphy.com/media/sE6jQonM5S8mI/giphy.gif" alt="cat on dog">
-    </section>
-    <section>
-        <h3>Vendor Prefixes</h3>
-        <p>HTML5 and CSS3 are still "new"!</p>
-        <p>This is great, but it means that not all browsers treat new CSS3 properties the same</p>
-    </section>
-    <section>
-        <h3>Vendor Prefixes</h3>
-        <p>Flags it as a work-in-progress</p>
-        <p>When finished, the browser should support the non-prefixed name</p>
-    </section>
-    <section>
-        <h3>Vendor Prefixes</h3>
-        <p>Each browser has their own:</p>
-        <ul>
-            <li>
-                <span class="green">Chrome:</span>-webkit-</li>
-            <li>
-                <span class="green">Firefox:</span>-moz-</li>
-            <li>
-                <span class="green">Safari:</span>-webkit-</li>
-            <li>
-                <span class="green">Opera:</span>-o-</li>
-        </ul>
-    </section>
-    <section>
-      <h2>When do we use prefixes?</h2>
-      <ul>
-        <li>Most of what we are covering in class does not need a vendor prefix</li>
-        <li><a href="https://caniuse.com/" target="_blank">Can I Use</a></li>
-        <li><a href="http://shouldiprefix.com/" target="_blank">Should I Prefix</a></li>
-      </ul>
-    </section>
-    <section>
-        <h3>Using Prefixes</h3>
-        <pre><code class="css">.container {
-          display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
-          display: -ms-flexbox;  /* TWEENER - IE 10 */
-          display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
-          display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
-}</code></pre>
-        <p>Order matters! The non-prefixed version should always go last.</p>
-    </section>
-    <section>
-        <h3>NOTE:</h3>
-        <p>While you should always use the vendor prefixes when necessary, today we're just going to use the non-prefixed property.</p>
-        <p>This is to save time during the code exercises</p>
-    </section>
+
 <section data-background="#f05b62">
     <h1 style="color: #fafafa;">Back to our Hero!</h1>
 </section>
@@ -360,12 +333,12 @@ border-radius: 50%;
         <code>background-size</code>
     </p>
     <pre><code class="css">#hero {
-background: url(../images/zebra.jpg) no-repeat;
-color: #fafafa;
-text-align: center;
-height: 350px;
-padding: 25px 0;
-background-size: cover;
+    background: url("images/zebra.jpg") no-repeat;
+    color: #fafafa;
+    text-align: center;
+    height: 350px;
+    padding: 25px 0;
+    background-size: cover;
 }
 </code></pre>
     <p>
@@ -375,9 +348,8 @@ background-size: cover;
   <img src="https://media.giphy.com/media/dCiUwcEcgRiAE/giphy.gif" alt="cats">
   <h3>Some other background image properties include:</h3>
   <ul>
-    <li><code>background-position</code></li>
-    <li><code>background-repeat</code></li>
-    <li><code>background-size</code></li>
+    <li><code>background-position (center, right, left, etc.)</code></li>
+    <li><code>background-repeat(repeat, no-repeat and more!)</code></li>
   </ul>
 
 </section>
@@ -388,7 +360,7 @@ background-size: cover;
         <ul>
             <li>Move the image down from the top</li>
             <li>Adjust the font size of the header</li>
-            <li>Add a border to the span</li>
+            <li>Use border radius to turn your image into a circle</li>
         </ul>
 
 </section>

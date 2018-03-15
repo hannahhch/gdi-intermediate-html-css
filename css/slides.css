@@ -948,3 +948,7 @@ article.transform-origin .example3 {
     background-color: blue;
   }
 }
+
+.img-small {
+    width: 300px;
+}
