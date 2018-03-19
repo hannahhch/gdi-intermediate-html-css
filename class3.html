@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="reveal/css/reveal.css">
     <link rel="stylesheet" href="reveal/css/theme/simple.css" id="theme">
 
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
+
     <!-- For syntax highlighting -->
     <!-- light editor-->
     <link rel="stylesheet" href="reveal/lib/css/light.css">
@@ -51,7 +54,7 @@
 <section>
     <h2>Day Three Agenda</h2>
         <ul>
-        <li>SVG Graphics and Font Awesome Icons</li>
+        <li>SVG and Font Awesome Icons</li>
         <li>Google Fonts</li>
         <li>RGBA Colors and Opacity</li>
         <li>Shadows</li>
@@ -60,129 +63,134 @@
 </section>
 
 <section data-background="#f05b62">
-    <h1 style="color: #fafafa;">SVG Graphics</h1>
+    <h2 style="color: #fafafa;">Scalable Vector Graphics(SVG)</h2>
+    <img src="https://media.giphy.com/media/OmK8lulOMQ9XO/giphy.gif"/>
 </section>
 <section>
-    <h2>SVG Graphics</h2>
-    <p>Designers everywhere have always wanted to use vector based graphics on their sites because of their quality.</p>
-    <p>Well now you can!</p>
+    <h2>How is an SVG different from a JPEG or PNG image?</h2>
 </section>
 <section>
-    <h2>It's not that new really</h2>
-    <p>It's been a W3C (World Wide Web Consortium) standard since 1999</p>
-    <p>In recent years browsers are becoming more and more compatable with SVG graphics.</p>
-    <p>Once upon a time, .png graphics weren't supported in browsers, soon the world will know about SVG!</p>
+        <p>SVGs are scalable, meaning when you change their dimensions, they will still look smooth!</p>
+        <img src="images/svg-example.png" style="width:60%"/>
 </section>
+<section>
+    <p>This is because unlike a reglular image, SVGs are made up of HTML</p>
+        <pre><code>
+<svg width="400" height="180">
+  <rect x="50" y="20" rx="20" ry="20" width="150" height="150"
+    style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
+</svg>
+</code>
+</pre>
+<img src="images/svg-square.png"/>
+<p>Example from W3schools</p>
+</section>
+<section>
+    <ul>
+        <li>SVGs are ideal for creating icons or graphics that may change their size (ie: desktop to mobile)</li>
+        <li>They can be animated with CSS and JS</li>
+        <li>Are supported by all browsers (IE9 and up)</li>
+    </ul>
+</section>
+
 <section>
     <h2>How to use SVG today</h2>
-    <p>Use Adobe Illustrator, or another vector program, to create a high quality image.</p>
+    <p>Use Adobe Illustrator, Sketch or another vector program, to create a high quality image.</p>
     <p>Save it as a .svg file.</p>
-    <p>Save a high res .png image as a fallback.</p>
 </section>
 <section>
     <h2>Include SVG</h2>
     <p>Use SVG as an image:</p>
-    <pre><code>&lt;img src="image.svg" onerror="this.onerror=null; this.src='image.png'"></code></pre>
+    <pre><code>&lt;img src="image.svg" alt="my-image"></code></pre>
     <p>Use SVG as a background image:</p>
     <p class="blue">HTML:</p>
     <pre><code>&lt;a href="/" class="logo">
-GDI
+  GDI
 &lt;/a></code></pre>
     <p class="blue">CSS:</p>
     <pre><code class="css">.logo {
-display: block;
-color: transparent;
-width: 100px;
-height: 82px;
-background: url(kiwi.svg);
-background-size: 100px 82px;
+  display: block;
+  color: transparent;
+  width: 100px;
+  height: 82px;
+  background: url(kiwi.svg);
+  background-size: 100px 82px;
 }</code></pre>
 </section>
-<section>
-    <h2>Browser Support</h2>
-    <p>Our favorite topic - Internet Explorer</p>
-    <img src="images/svg-support.png" alt="SVG support" />
-    <p>Chris Coyer has written an <a href="http://css-tricks.com/using-svg/" target="_blank">amazing article</a> with tons of work arounds for our BFF IE8.</p>
+<section data-background="#f05b62">
+    <h2 style="color: #fafafa;">FontAwesome</h2>
+    <img src="https://media.giphy.com/media/l1J3pT7PfLgSRMnFC/giphy.gif"/>
 </section>
 <section>
-<h3>SVG Social Icons</h3>
-<p>Now that we know how awesome SVG graphics are, let's use them in our social links section.</p>
+    <p><a href="https://fontawesome.com/" target="_blank">FontAwesome </a>provides free SVG icons</p>
+    <p>Including them in our code is a little different than regular SVGs</p>
+</section>
+<section>
+    <p>First we will need a CDN (content delivery network) code from FontAwesome. This will go in the head of our HTML document.</p>
+    <pre>
+<code>
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
+</code>
+</pre>
+
+<p>The CDN codes tells our HTML file to include FontAwesome in our project!</p>
+</section>
+<section>
+<p>Now we can browse the FA library for icons</p>
+<a href="https://fontawesome.com/icons">FontAwesome Icons</a>
+<i class="fas fa-book"></i>
+<pre><code><i class="fas fa-book"></i></code></pre>
 </section>
 <section>
 <h3>Social Links: HTML</h3>
 <pre><code class="html">&lt;section id="social">
-&lt;ul>
-&lt;li>
-&lt;a href="..">
-&lt;img src="images/facebook.svg" alt="Facebook" />
-&lt;/a>
-&lt;/li>
+  &lt;ul class="social-icons">
+    &lt;li>
+      &lt;a href="..">
+        &lt;img src="images/facebook.svg" alt="Facebook" />
+      &lt;/a>
+    &lt;/li>
+    &lt;li>
+      &lt;a href="..">
+        &lt;i class="fab fa-linkedin-in"></i> />
+      &lt;/a>
+    &lt;/li>
 &lt;!-- Repeat for all social links you want to include -->
-&lt;/ul>
+  &lt;/ul>
 &lt;/section>
 </code></pre>
 <p>We're using a list for these links for the exact same reason we used them in the navigation. They are a list of links, and should be marked up accordingly.</p>
 </section>
 <section>
-<h3>Social Links: CSS</h3>
-<p>We'll need to add a background, some padding, account for the floated list items.</p>
-<pre><code class="css">#social {
-background: #57BEC5;
-color: #fafafa;
-padding: 25px 0;
-overflow: hidden;
-}
-#social li {
-float: left;
-width: auto;
-padding: 20px;
-}</code></pre>
-</section>
-<section>
-<h3>Centering the List</h3>
-<p>First we should put our social links in a container! We'll also add in a headline.</p>
-<pre><code class="xml">&lt;section id="social">
-&lt;div class="container">
-&lt;h3>...&lt;/h3>
-&lt;ul>
-...
-&lt;/ul>
-&lt;/div>
-&lt;/section></code></pre>
-<p>Next we'll center the
-    <code>ul</code> with a very <a href="http://matthewjamestaylor.com/blog/beautiful-css-centered-menus-no-hacks-full-cross-browser-support" target="_blank">flexible technique</a> that will allow us to have a list of any width</p>
-</section>
-<section>
 <h3>Develop It!</h3>
 <ul>
-    <li>Style the headline using the Descendant Selector</li>
-    <li>If you have Illustrator or another program to modify .svg graphics, change the colors to match your site</li>
+    <li>Practice using the SVGs we've included and FontAwesome to add in some social links to your site.</li>
+    <li>Remember you can use flexbox to center and space out your content!</li>
 </ul>
 </section>
 
 
 <section data-background="#f05b62">
-<h1 style="color: #fafafa;">@font-face</h1>
-<h3 style="color: #fafafa;">Or really, the reason you took this class.</h3>
+<h1 style="color: #fafafa;">Google Fonts</h1>
 </section>
 <section>
-<h3>@font-face</h3>
+<h3>Google Fonts</h3>
 <p>The world of HTML has progressed beyond Times New Roman and Arial</p>
 <p class="green">Yay!</p>
 <p>How do we use new and cool fonts?</p>
 </section>
 <section>
-<h3>Class, meet Google Web Fonts</h3>
+<h3>Meet Google Web Fonts</h3>
 <p>Google has hundreds of free, open-source fonts that have been optimized for the web, and ready for us to use!</p>
 <p>The service runs on Google's servers which are fast, reliable and tested. Google provides this service free of charge.</p>
 </section>
 <section data-background="#f05b62">
-<h2 style="color: #fafafa;"><a href="http://www.google.com/fonts" style="color: #fafafa;" target="_blank">www.google.com/fonts</a>
+<h2 style="color: #fafafa;"><a href="https://fonts.google.com/" style="color: #fafafa;" target="_blank">https://fonts.google.com/</a>
 </h2>
 </section>
 <!-- Fonts-->
 <section>
-<h3>@font-face</h3>
 <p>In our example, we've used Lato for the body and Bree Serif for the headlines</p>
 <p>You can use any font you'd like!</p>
 <img src="images/lato.png" alt="lato" style="width: 40%; float: left;" />
@@ -193,32 +201,28 @@ padding: 20px;
 <ol>
     <li>Search the hundreds of font families, then add them to your collection.</li>
     <li>Compare and refine the collection - think about what styles you NEED.</li>
-    <li>Grab the code that Google prepares for you and add it to your site!</li>
+    <li>Grab the code that Google prepares for you put it in the head of your HTML doc!</li>
 </ol>
-<pre><code class = "html">
-@import url(http://fonts.googleapis.com/
-css?family=Lato:300,400,700,300italic,400italic|Bree+Serif);
+<pre><code>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </code></pre>
-<a href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic|Bree+Serif" target="_blank">What does that do?</a>
 </section>
 
 <section>
 <h3>Integrating into the CSS</h3>
 <pre><code class = "html">
-body{
-font-family: 'Lato', sans-serif;
+body {
+  font-family: 'Lato', sans-serif;
 }
+
 h1, h2, h3, h4, h5, h6 {
-font-family: 'Bree Serif', serif;
+  font-family: 'Bree Serif', serif;
 }
 </code></pre>
 </section>
 <section>
 <h3>Develop It!</h3>
 <p>Pick some fonts for your site using Google Fonts.</p>
-<p>Adjust the
-    <code>font-size</code> and
-    <code>line-height</code> to refine your fonts.</p>
 </section>
 <section data-background="#f05b62">
 <h2 style="color: #fafafa;">rgba colors &amp; opacity</h2>
@@ -317,7 +321,7 @@ rgba(255, 0, 0, .1);
 <section>
 <h3>Develop It!</h3>
 <p>Change some colors to have alpha transparency or opacity.</p>
-<p>Use <a href="http://hex2rgba.devoth.com/" target="_blank">http://hex2rgba.devoth.com/</a> to convert HEX to RGBA.</p>
+<p>Use <a href="https://www.webpagefx.com/web-design/hex-to-rgb/" target="_blank">COLORRRS</a> to convert HEX to RGB (the A value is up to you!).</p>
 <p>Hint: Try making the navbar 80% opaque.</p>
 
 </section>
@@ -327,15 +331,17 @@ rgba(255, 0, 0, .1);
 <!--Text Shadow-->
 <section>
 <h2>text-shadow</h2>
-<pre><code>#example1 { text-shadow: 2px 2px 10px red; }
+<pre><code>#example1 {
+  text-shadow: 2px 2px 10px red;
+}
 
 #example2 {
-text-shadow: 1px 1px 10px red,
-10px 10px 10px orange,
-15px 15px 10px yellow,
-20px 20px 10px green,
-25px 25px 10px blue,
-30px 30px 10px purple;
+  text-shadow: 1px 1px 10px red,
+  10px 10px 10px orange,
+  15px 15px 10px yellow,
+  20px 20px 10px green,
+  25px 25px 10px blue,
+  30px 30px 10px purple;
 }</code></pre>
 <article class="text-shadow">
 <div class="example1">lorem ipsum</div>
