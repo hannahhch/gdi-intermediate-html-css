@@ -74,7 +74,7 @@
         <img src="images/svg-example.png" style="width:60%"/>
 </section>
 <section>
-    <p>This is because unlike a reglular image, SVGs are made up of HTML</p>
+    <p>This is because unlike a reglular image, SVGs are made up of code(XML)</p>
         <pre><code>
 <svg width="400" height="180">
   <rect x="50" y="20" rx="20" ry="20" width="150" height="150"
@@ -95,7 +95,7 @@
 
 <section>
     <h2>How to use SVG today</h2>
-    <p>Use Adobe Illustrator, Sketch or another vector program, to create a high quality image.</p>
+    <p>Designers will use Adobe Illustrator, Sketch or another vector program, to create a high quality image.</p>
     <p>Save it as a .svg file.</p>
 </section>
 <section>
@@ -140,7 +140,7 @@
 <p>Now we can browse the FA library for icons</p>
 <a href="https://fontawesome.com/icons">FontAwesome Icons</a>
 <i class="fas fa-book"></i>
-<pre><code><i class="fas fa-book"></i></code></pre>
+<pre><code>&lt;i class="fas fa-book">&lt;/i></code></pre>
 </section>
 <section>
 <h3>Social Links: HTML</h3>
@@ -153,7 +153,7 @@
     &lt;/li>
     &lt;li>
       &lt;a href="..">
-        &lt;i class="fab fa-linkedin-in"></i> />
+        &lt;i class="fab fa-linkedin-in">&lt;/i>
       &lt;/a>
     &lt;/li>
 &lt;!-- Repeat for all social links you want to include -->
@@ -173,6 +173,7 @@
 
 <section data-background="#f05b62">
 <h1 style="color: #fafafa;">Google Fonts</h1>
+<img src="https://media.mnn.com/assets/images/2015/08/google%20cat.jpg.653x0_q80_crop-smart.jpg" />
 </section>
 <section>
 <h3>Google Fonts</h3>
@@ -186,8 +187,7 @@
 <p>The service runs on Google's servers which are fast, reliable and tested. Google provides this service free of charge.</p>
 </section>
 <section data-background="#f05b62">
-<h2 style="color: #fafafa;"><a href="https://fonts.google.com/" style="color: #fafafa;" target="_blank">https://fonts.google.com/</a>
-</h2>
+<h3 style="color: #fafafa;"><a href="https://fonts.google.com/" style="color: #fafafa;" target="_blank">https://fonts.google.com/</a></h3>
 </section>
 <!-- Fonts-->
 <section>
@@ -203,15 +203,12 @@
     <li>Compare and refine the collection - think about what styles you NEED.</li>
     <li>Grab the code that Google prepares for you put it in the head of your HTML doc!</li>
 </ol>
-<pre><code>
-<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-</code></pre>
+<pre><code>&lt;link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"></code></pre>
 </section>
 
 <section>
 <h3>Integrating into the CSS</h3>
-<pre><code class = "html">
-body {
+<pre><code class = "html">body {
   font-family: 'Lato', sans-serif;
 }
 
@@ -224,8 +221,10 @@ h1, h2, h3, h4, h5, h6 {
 <h3>Develop It!</h3>
 <p>Pick some fonts for your site using Google Fonts.</p>
 </section>
+
 <section data-background="#f05b62">
 <h2 style="color: #fafafa;">rgba colors &amp; opacity</h2>
+<img src="https://media.giphy.com/media/118XwXiUgCHDqg/giphy.gif" />
 </section>
 <section>
 <h3>rgba colors &amp; opacity</h3>
@@ -236,6 +235,7 @@ h1, h2, h3, h4, h5, h6 {
 <li><strong>opacity</strong> - controls the opacity of an element</li>
 </ul>
 </section>
+
 <section>
 <h3>rgba colors &amp; opacity</h3>
 <article class="fragment">
@@ -292,8 +292,7 @@ rgba(255, 0, 0, .1);
 <section>
 <h3>rgba colors</h3>
 <p>controls the opacity of a color</p>
-<pre><code>
-.example2 {
+<pre><code>.example2 {
   background-color: rgba(255, 0, 0, 0.8);
 }
 </code></pre>
@@ -307,8 +306,7 @@ rgba(255, 0, 0, .1);
 <section>
 <h3>opacity</h3>
 <p>controls the opacity of an element</p>
-<pre><code>
-.example2 {
+<pre><code>.example2 {
   opacity: 0.8;
 }
 </code></pre>
@@ -327,10 +325,16 @@ rgba(255, 0, 0, .1);
 </section>
 <section data-background="#f05b62">
 <h2 style="color: #fafafa;">Text Shadow</h2>
+<img src="https://media.giphy.com/media/rhC9Q9V0D4MSs/giphy.gif" />
 </section>
 <!--Text Shadow-->
 <section>
 <h2>text-shadow</h2>
+<ol>
+    <li>Vertical spacing</li>
+    <li>Horizontal spacing</li>
+    <li>Blur</li>
+</ol>
 <pre><code>#example1 {
   text-shadow: 2px 2px 10px red;
 }
@@ -350,6 +354,7 @@ rgba(255, 0, 0, .1);
 </section>
 <section data-background="#f05b62">
 <h2 style="color: #fafafa;">Box Shadow</h2>
+<img src="https://media.giphy.com/media/TlK63EKa88o4DO07hHa/giphy.gif" />
 </section>
 <section>
 <h3>box-shadow</h3>
@@ -358,8 +363,9 @@ rgba(255, 0, 0, .1);
 <section class="example1">
 <h3>box-shadow</h3>
 <p>box-shadow: offset-x offset-y color</p>
-<pre><code>
-.example1 { box-shadow: 5px 5px red; }
+<pre><code>.example1 {
+  box-shadow: 5px 5px red;
+}
 </code></pre>
 <div style="box-shadow: 5px 5px red; height: 100px; width: 100px; border: 2px solid black; margin: 0 auto;">
 </div>
@@ -367,8 +373,9 @@ rgba(255, 0, 0, .1);
 <section class="example2">
 <h3>box-shadow</h3>
 <p>box-shadow: offset-x offset-y blur spread color</p>
-<pre><code>
-.example { box-shadow: 0 0 5px 5px red; }
+<pre><code>.example {
+  box-shadow: 0 0 5px 5px red;
+}
 </code></pre>
 <div style="box-shadow: 0 0 5px 5px red; height: 100px; width: 100px; border: 2px solid black; margin: 0 auto;">
 </div>
@@ -376,8 +383,9 @@ rgba(255, 0, 0, .1);
 <section>
 <h3>box-shadow</h3>
 <p>box-shadow: offset-x offset-y blur spread color</p>
-<pre><code>
-.example { box-shadow: 0 2px 5px 0px red; }
+<pre><code>.example {
+  box-shadow: 0 2px 5px 0px red;
+}
 </code></pre>
 <div style="box-shadow: 0 2px 5px 0px red; height: 100px; width: 100px; border: 2px solid black; margin: 0 auto;">
 </div>
@@ -394,6 +402,7 @@ rgba(255, 0, 0, .1);
 <!-- Gradients-->
 <section data-background="#f05b62">
 <h2 style="color: #fafafa;">CSS Gradients</h2>
+<img src="https://i.imgur.com/kRjTfHK.jpg?1" />
 </section>
 <section>
 <h2>Gradients</h2>
@@ -402,13 +411,15 @@ rgba(255, 0, 0, .1);
 <section>
 <h2>Linear gradients</h2>
 <pre><code class="css">.linear-example1 {
-background-image: linear-gradient(red, orange, yellow, green, blue, indigo, violet);
+  background-image: linear-gradient(red, orange, yellow, green, blue, indigo, violet);
 }
+
 .linear-example2 {
-background-image: linear-gradient(right, red, orange, yellow, green, blue, indigo, violet);
+  background-image: linear-gradient(right, red, orange, yellow, green, blue, indigo, violet);
 }
+
 .linear-example3 {
-background-image: linear-gradient(bottom right, red, orange, yellow, green, blue, indigo, violet);
+  background-image: linear-gradient(bottom right, red, orange, yellow, green, blue, indigo, violet);
 }</code></pre>
 <article class="gradients">
 <div class="linear-example1">
@@ -422,13 +433,15 @@ background-image: linear-gradient(bottom right, red, orange, yellow, green, blue
 <section>
 <h2>Linear gradients</h2>
 <pre><code class="css">.linear-example4 {
-background-image: linear-gradient(red, white);
+  background-image: linear-gradient(red, white);
 }
+
 .linear-example5 {
-background-image: linear-gradient(right, red, white);
+  background-image: linear-gradient(right, red, white);
 }
+
 .linear-example6 {
-background-image: linear-gradient(bottom right, red, white);
+  background-image: linear-gradient(bottom right, red, white);
 }</code></pre>
 <article class="gradients">
 <div class="linear-example4">
@@ -442,13 +455,15 @@ background-image: linear-gradient(bottom right, red, white);
 <section>
 <h2>Radial gradients</h2>
 <pre><code>.radial-example1 {
-background-image: radial-gradient(circle cover, red, orange, yellow, green, blue, indigo, violet);
+  background-image: radial-gradient(circle cover, red, orange, yellow, green, blue, indigo, violet);
 }
+
 .radial-example2 {
-background-image: radial-gradient(0 0, circle, red, orange, yellow, green, blue, indigo, violet);
+  background-image: radial-gradient(0 0, circle, red, orange, yellow, green, blue, indigo, violet);
 }
+
 .radial-example3 {
-background-image: radial-gradient(0 50%, circle, red, orange, yellow, green, blue, indigo, violet);
+  background-image: radial-gradient(0 50%, circle, red, orange, yellow, green, blue, indigo, violet);
 }</code></pre>
 <article class="gradients">
 <div class="radial-example1">
@@ -462,13 +477,15 @@ background-image: radial-gradient(0 50%, circle, red, orange, yellow, green, blu
 <section>
 <h2>Radial gradients</h2>
 <pre><code>.radial-example4 {
-background-image: radial-gradient(circle cover, red, white);
+  background-image: radial-gradient(circle cover, red, white);
 }
+
 .radial-example5 {
-background-image: radial-gradient(0 0, circle, red, white);
+  background-image: radial-gradient(0 0, circle, red, white);
 }
+
 .radial-example6 {
-background-image: radial-gradient(0 50%, circle, red, white);
+  background-image: radial-gradient(0 50%, circle, red, white);
 }</code></pre>
 <article class="gradients">
 <div class="radial-example4">
