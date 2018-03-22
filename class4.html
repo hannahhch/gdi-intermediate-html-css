@@ -48,19 +48,34 @@
                 <h3>Intermediate HTML/CSS &amp; Intro to Responsive Design (Class 4)</h3>
             </section>
             <!-- Welcome-->
+            <!-- Welcome-->
+<section>
+    <h2>Day Four Agenda</h2>
+        <ul>
+        <li>CSS Transitions</li>
+        <li>CSS Transformations</li>
+        <li>Responsive Web Desgin</li>
+        <li>LESS and SASS</li>
+        <li>Next Steps</li>
+        </ul>
+</section>
 
 <section data-background="#f05b62">
         <h2 style="color: #fafafa;">Transitions</h2>
-        <h4 style="color: #fafafa;">Allow property changes in CSS values to occur smoothly over a specified duration</h4>
-        <h4 style="color: #fafafa;">Create some awesome effects without any JavaScript</h4>
+        <img src="https://media.giphy.com/media/quO0X65yj6gw0/giphy.gif"/>
     </section>
+<section>
+    <h4>Allow property changes in CSS values to occur smoothly over a specified duration.</h4>
+    <h4>Create some awesome effects without any JavaScript!</h4>
+    <p class='hover-example'>Hover Me!</p>
+
+</section>
 <section>
   <h2>Transition Triggers</h2>
   <ul>
     <li>Hover</li>
-    <li>Mouse click</li>
-    <li>Focus state</li>
-    <li>Active state</li>
+    <li>Focus state (forms and buttons)</li>
+    <li>Active state(links)</li>
     <li>Changes to the element</li>
   </ul>
 </section>
@@ -76,13 +91,26 @@
 <section>
   <h2>transition-property</h2>
   <p>the names of CSS properties that should be transitioned</p>
-  <pre><code>
-.example1 { transition-property: background-color; }
-  </code></pre>
-  <p>set to <strong>all</strong> to transition all CSS properties</p>
-  <pre><code>
-.example2 { transition-property: all; }
-  </code></pre>
+  <pre><code>.text-box {
+  background-color: #E06566;
+  transition-property: background-color;
+}
+
+.text-box:hover {
+  background-color: #65c3ba;
+}</code></pre>
+<div class="square">
+<p>I will be transitioned!</p>
+</div>
+</section>
+<section>
+    <p>set to <strong>all</strong> to transition all CSS properties</p>
+    <pre><code>.text-box {
+    transition-property: all;
+ }</code></pre>
+  <div class="square">
+  <p>I will be transitioned!</p>
+  </div>
 </section>
 <section>
   <h2>transition-property</h2>
@@ -96,25 +124,34 @@
 <section class="transition-duration">
   <h2>transition-duration</h2>
   <p>the number of seconds or milliseconds a transition animation should take to complete</p>
-  <pre><code>
-.example1 { transition-duration: 2s; }
-  </code></pre>
-  <div class="sliders" style="width:40%;">
-    <p>
-      <span class="value">2</span>s duration
-      <input type="range" min="0" max="10" value="3">
-    </p>
-  </div>
-  <div class="example">
-  </div>
+  <pre><code>.text-box {
+  transition-property: background-color;
+  transition-duration: 2s;
+  background-color: #E06566;
+}
+
+.text-box:hover {
+  background-color: #65c3ba;
+}</code></pre>
 </section>
 <section class="transition-delay">
   <h2>transition-delay</h2>
   <p>delay transitions from the moment a trigger happens</p>
-  <pre><code>.example1 { transition-delay: 0s; }
-.example2 { transition-delay: 1s; }
-.example3 { transition-delay: 2s; }
-.example4 { transition-delay: 3s; }</code></pre>
+  <pre><code>.example1 {
+transition-delay: 0s;
+}
+
+.example2 {
+ transition-delay: 1s;
+}
+
+.example3 {
+transition-delay: 2s;
+}
+
+.example4 {
+transition-delay: 3s;
+}</code></pre>
   <article>
     <div class="example4">3</div>
     <div class="example3">2</div>
@@ -125,7 +162,10 @@
 <section class="transition-timing-function">
   <h2>transition-timing-function</h2>
   <p>determines how intermediate values are calculated</p>
-  <pre><code>.example { transition-timing-function: ease; }</code></pre>
+  <pre><code>.example {
+  transition-timing-function: linear;
+}</code></pre>
+<p>The default value is "ease"</p>
   <article>
     <div class="ease">ease</div>
     <div class="linear">linear</div>
@@ -151,11 +191,12 @@
 <section data-background="#f05b62">
         <h2 style="color: #fafafa;">Transforms</h2>
         <h4 style="color: #fafafa;">Allow elements rendered by CSS to be transformed in space</h4>
+        <img src="https://media.giphy.com/media/SyqfOzwy6tZug/giphy.gif" class='img-md'/>
 </section>
 <section>
   <h2>Transform: Scale</h2>
   <p>scales the element</p>
-  <p>transform:  scale(sx[, sy]);</p>
+  <p>transform:  scale(sx, sy);</p>
   <article class="transform-scale">
     <div class="example1">
       scale(2);
@@ -235,17 +276,18 @@
 <section>
     <h3>Develop It!</h3>
     <p>Pick a transform property and apply it to an element.</p>
-    <p>Hint: The transforms, like transitions, will only work if the element has a pseudo class, like :hover</p>
-    <p>Extra Credit: Use it with transition to make the transform smoother.</p>
+    <p>Hint: unlike transitions, transforms will work with or without a :hover!</p>
+    <p>Extra Credit: If using a hover effect, use transform with transition to make the transform smoother.</p>
 </section>
 
 <section data-background="#f05b62">
         <h2 style="color: #fafafa;">Responsive Web Design (RWD)</h2>
+        <img src="https://media.giphy.com/media/Kbo4o0KqfD4sM/giphy.gif"/>
     </section>
 <section>
   <h2>What is it!?</h2>
   <p>RWD is a design approach that suggests that the design &amp; development of a site shoud respond to the user's behavior and environment.</p>
-  <p><img src="images/responsive-design.png" alt="responsive design"/></p>
+  <p><img src="images/responsive-design.png" alt="responsive design" class="img-md"/></p>
 </section>
 <section>
   <h2>Wait, people really care?</h2>
@@ -260,12 +302,22 @@
   <p>RWD modifies the presentation of a site, without modifying the content of the page. So no matter what, every user has access to the same information.</p>
 <img src="images/responsive-example.png" alt="responsive example" />
 </section>
+<section>
+    <h3>Examples</h3>
+<ul>
+    <li>    <a href="http://colly.com/" target="_blank">http://colly.com/</a>
+
+</li>
+<li>    <a href="http://vallierbistro.com/en/" target="_blank">http://vallierbistro.com/en/</a>
+</li>
+</ul>
+</section>
 
 <section>
 <h2>How did we get here?</h2>
   <ul>
     <li>In 2010, Ethan Marcotte coined the term in an article on <a href="http://alistapart.com/article/responsive-web-design" target="_blank">A List Apart</a></li>
-    <li>In 2011, he wrote the book on it (literally), called: "Responsive Web Design"</li>
+    <li>In 2011, he wrote the <a href="https://abookapart.com/products/responsive-web-design" target="_blank">book</a> on it (literally), called: "Responsive Web Design"</li>
     <li>In 2012, RWD was the #2 trend in web design</li>
     <li>2013 was called "The Year of Responsive Web Design" because it was and still is a cost effective alternative to mobile apps</li>
   </ul>
@@ -304,7 +356,7 @@
   <p>By using max-width on images, they will only expand to the size of their parent.</p>
   <p>If their parent has no width, it will just expand to the width of the viewport.</p>
 <pre><code>img {
-max-width: 100%;
+  max-width: 100%;
 }</code></pre>
 </section>
   <section>
@@ -318,30 +370,32 @@ max-width: 100%;
     </ul>
   </section>
   <section>
-    <h2>Include Media Queries Last</h2>
-    <p>They will overwrite previous styles because they are last in the cascade.</p>
-    <div>Here's the CSS for #header-image</div>
+    <h2>Standard Media Queries</h2>
+<pre><code>h1 {
+  // mobile
+  font-size: 12px;
+}
 
-    <p><img src="images/mq-normal-style.png" width="380px"/></p>
-    <div>And here are the media queries that call for the larger image to be used for screens over 1200px wide, and to turn off the header image if the site is printed.</div>
-    <p><img src="images/mq-larger-img.png" height="120px"/><img src="images/mq-print.png" height="120px"/></p>
+@media screen and (min-width: 425px) {
+  // anything larger than 425 pixels (tablet)
+  h1 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  // anything larger than 768 pixels (desktop)
+  h1 {
+    font-size: 24px;
+  }
+}</code></pre>
+
   </section>
   <section>
-    <h2>Standard MQs</h2>
-    <p>For devices that have dimensions no smaller than 320px and are not larger than 480px</p>
-<pre><code>/* Smartphones (portrait and landscape) */
-@media only screen and (min-device-width : 320px)
-and (max-device-width : 480px) {
-/* Styles */
-}</code></pre>
-<p>iPad dimensions with the orientation in landscape.</p>
-<pre><code>/* iPads (landscape) ----------- */
-@media only screen and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : landscape) {
-/* Styles */
-}</code></pre>
+    <h2>Include Media Queries Last</h2>
+    <p>They will overwrite previous styles because they are last in the cascade.</p>
   </section>
+
   <section>
     <h2>How they work</h2>
     <p>Rather than looking for a type of device, they look at the capability of the device. You can use them to check for all sorts of things.</p>
@@ -383,193 +437,92 @@ user-scalable=true;"></code></pre>
     <p>Add the viewport meta tag to the html.</p>
     <p>Use media queries to shift elements around on the page and to increase legibilty.</p>
   </section>
-
-  <section>
-      <h2>Retina Images</h2>
-      <p>Retina screens have twice the pixel density than regular screens.</p>
-      <p>If you're not using SVG Graphics, you'll need two images, one for regular resolution and one for retina.</p>
-    </section>
-    <section>
-      <h2>2x Media Queries</h2>
-      <p>Target only retina screens by using this media query:</p>
-<pre><code>@media
-(-webkit-min-device-pixel-ratio: 2),
-(min-resolution: 192dpi) {
-/* Retina-specific stuff here */
-}</code></pre>
-      <p>This takes care of two things, 2x pixel ratio on iOS devices and "high res" Android screens.</p>
-    </section>
-    <section>
-      <h2>2x Images</h2>
-      <div class="left" style="width:50%;">
-      <p class="green">Regular resolution icon</p>
-      <img src="images/119-piggy-bank.png" />
-      </div>
-       <div class="right" style="width:50%;">
-      <p class="green">2x resolution icon</p>
-      <img src="images/119-piggy-bank@2x.png" />
-      </div>
-
-<pre style="clear: both;"><code>@media
-(-webkit-min-device-pixel-ratio: 2),
-(min-resolution: 192dpi) {
-.icon {
-background-image: url(images/icon-2x.png) no-repeat 0 0;
-background-size: 20px 20px;
-}
-}</code></pre>
-    </section>
-    <section>
-      <h2>Or, you could just use SVG</h2>
-    </section>
-
-    <section>
-      <h2>Responsive frameworks</h2>
-      <p>Download a pre-built framework that has basic styles already set up.</p>
-      <ul>
-        <li>Fluid grids</li>
-        <li>Flexible images</li>
-        <li>Responsive media queries</li>
-        <li>Styles for buttons and forms, because they're a pain!</li>
-        <li>Lots of base styles like .pull-right, .btn, etc.</li>
-      </ul>
-    </section>
-    <section>
-      <h2>Bootstrap</h2>
-      <p>By far the most popular front-end framework out there.</p>
-      <img src="images/bootstrap.png" style="height:400px"/>
-      <p><a href="http://getbootstrap.com/" target="_blank">Download</a></p>
-    </section>
-
-    <section>
-      <h2>Foundation</h2>
-      <p>Another very popular framework that is just as robust at bootstrap - but in a different way.</p>
-      <img src="images/foundation.png" style="height:400px"/>
-      <p><a href="http://foundation.zurb.com/" target="_blank">Download</a></p>
-    </section>
-    <section>
-      <h2>What they include</h2>
-      <ul>
-        <li>Fully responsive out of the box</li>
-        <li>Embraces Mobile First standards</li>
-        <li>Compiled CSS for all sorts of components</li>
-        <li>LESS or SASS stylesheets for rapid updates</li>
-        <li>Javascript for popular components</li>
-        <li>Pre-set styles for icons and buttons</li>
-        <li>Includes Glyphic icon set (awesome!)</li>
-      </ul>
-    </section>
-    <section>
-      <h2>What are the cons?</h2>
-      <ul>
-        <li>Default styles are ... default and not very exciting</li>
-        <li>Requires a fair amount of customization to make a unique looking site</li>
-        <li>The documentation is daunting and can be very indimidating</li>
-        <li>Remembering all the class names can be overwhelming</li>
-      </ul>
-    </section>
     <section>
       <h2>LESS &amp; SASS?!</h2>
+<img src="https://media.giphy.com/media/VSJIRWqqjm0Gk/giphy.gif"/>
       <p>These are two very popular CSS preprocessors</p>
     </section>
     <section>
       <h2>What the what is a CSS Preprocessor?</h2>
-      <p>CSS preprocessors take code written in the preprocessed language and then convert that code into the same old css we’ve been writing for years.</p>
+      <p>CSS preprocessors take code written in the preprocessed language and then convert that code into the same old CSS we’ve been writing for years.</p>
       <p>Since we're not writing straight CSS, we're not limited to the restrictions of the language.</p>
     </section>
-    <section>
-      <h2>What they do</h2>
-      <ul>
-      <li><strong>Mixins – </strong>Classes for classes.</li>
-      <li><strong>Parametric mixins – </strong>Classes to which you can pass parameters, like functions.</li>
-      <li><strong>Nested Rules – </strong>Classes within classes, which cut down on repetitive code</li>
-      <li><strong>Operations – </strong>Math within CSS</li>
-      <li><strong>Color functions – </strong>Edit your colors</li>
-      <li><strong>Namespaces – </strong>Groups of styles that can be called by references</li>
-      <li><strong>Scope – </strong>Make local changes to styles</li>
-      <li><strong>JavaScript evaluation – </strong>JavaScript expressions evaluated in CSS</li>
-      </ul>
-    </section>
-    <section>
-      <h2>Some highlights</h2>
-      <p>Mixins!</p>
-<pre><code>/* LESS */ .rounded-corners (@radius: 5px) {
--webkit-border-radius: @radius;
--moz-border-radius: @radius;
--ms-border-radius: @radius;
--o-border-radius: @radius;
-border-radius: @radius;
-}
+<section>
+    <a href="https://codepen.io/hannahhch/pen/Ovmjxy" target="_blank">CodePen Example</a>
+    <pre><code>@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
 
-#footer {
-.rounded-corners(10px);
-}</code></pre>
-<pre><code>
-/* Compiled CSS read by the browser */
-#footer {
--webkit-border-radius: 10px;
--moz-border-radius: 10px;
--ms-border-radius: 10px;
--o-border-radius: 10px;
-border-radius: 10px;
+@myPurple: #5f27cd;
+@blue: #48dbfb;
+@bestFont: 'Permanent Marker', cursive;
+@headerSize: 70px;
+
+h1 {
+  color: @myPurple;
+  font-family: @bestFont;
+  font-size: @headerSize;
+  text-align: center;
+  background: @blue;
+
+  &:hover {
+    color: @blue;
+    background: @myPurple;
+  }
 }</code></pre>
 </section>
+
 <section>
 <h2>Nested Rules</h2>
 <pre><code>// LESS
-
 #header {
-h1 {
-font-size: 26px;
-font-weight: bold;
+  h1 {
+    font-size: 26px;
+    font-weight: bold;
+
+    &amp;:hover {
+      border-width: 1px
+    }
+  }
 }
-p { font-size: 12px;
-a { text-decoration: none;
-&:hover { border-width: 1px }
-}
-}
-}</code></pre>
+</code></pre>
 <pre><code>/* Compiled CSS */
 
-#header h1 {font-size: 26px;font-weight: bold;}
-#header p {font-size: 12px;}
-#header p a {text-decoration: none;}
-#header p a:hover {border-width: 1px;}</code></pre>
+#header h1 {
+  font-size: 26px;
+  font-weight: bold;
+}
 
-  </section>
-  <section>
-    <h2>Functions</h2>
-    <p>LESS</p>
-<pre><code>p {
-color: lighten(@base, 5%);
+#header h1:hover {
+  border-width: 1px;
 }</code></pre>
-    <p>SASS</p>
-<pre><code>p {
-color: hsl($hue: 0, $saturation: 100%, $lightness: 50%);
-}</code></pre>
+
   </section>
   <section>
     <h2>Variables</h2>
     <p>LESS</p>
 <pre><code>// LESS
 @blue: #199FD9;
+
 p {
-color: @blue;
-}
-// Compiled CSS
-p {
-color: #199FD9;
+  color: @blue;
 }</code></pre>
-<p>SASS</p>
-<pre><code>// SASS
-$blue: #199FD9;
+<pre><code>// Compiled CSS
 p {
-color: $blue;
-}
-// Compiled CSS
-p {
-color: #199FD9;
+  color: #199FD9;
 }</code></pre>
+
+</section>
+<section>
+    <h3>Next Steps</h3>
+<img src="https://media.giphy.com/media/WqmYGa2LjQlTG/giphy.gif"/>
+
+ <p><a href="https://www.meetup.com/Girl-Develop-It-RDU/events/248708590/" target="_blank">JavaScript for Beginners Class</a></p>
+<p><a href="https://www.codecademy.com/learn/learn-sass" target="_blank">Learn SASS on CodeAcademy</a></p>
+<p><a href="https://momentumlearn.com/" target="_blank">Momentum</a></p>
+</section>
+<section>
+    <h1>Thanks!</h1>
+<h2>Hannah Hudson</h2>
+<h3>hannah.hch@gmail.com</h3>
 </section>
 </div>
 <footer>
