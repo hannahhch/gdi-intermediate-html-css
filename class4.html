@@ -91,6 +91,7 @@
 <section>
   <h2>transition-property</h2>
   <p>the names of CSS properties that should be transitioned</p>
+    <p>Note: If just using hover, we <strong>don't</strong> need to specify the transition-property!!</p>
   <pre><code>.text-box {
   background-color: #E06566;
   transition-property: background-color;
@@ -133,6 +134,10 @@
 .text-box:hover {
   background-color: #65c3ba;
 }</code></pre>
+<div class="square-transition">
+<p>I will be transitioned!</p>
+</div>
+
 </section>
 <section class="transition-delay">
   <h2>transition-delay</h2>
@@ -261,15 +266,15 @@ transition-delay: 3s;
   <p>transform-origin: x-offset y-offset;</p>
   <article class="transform-origin">
     <div class="example1">
-      transform-origin(top, left)
+      (top, left)
     </div>
 
     <div class="example2">
-      transform-origin(50%, 50%)
+      (50%, 50%)
     </div>
 
     <div class="example3">
-      transform-origin(0, 50px)
+      (0, 50px)
     </div>
   </article>
 </section>
@@ -521,8 +526,7 @@ p {
 </section>
 <section>
     <h1>Thanks!</h1>
-<h2>Hannah Hudson</h2>
-<h3>hannah.hch@gmail.com</h3>
+
 </section>
 </div>
 <footer>
